@@ -1,0 +1,1 @@
+json.partial! "send_sms/send_sm", send_sm: @send_sm

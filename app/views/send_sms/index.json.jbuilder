@@ -1,0 +1,1 @@
+json.array! @send_sms, partial: 'send_sms/send_sm', as: :send_sm

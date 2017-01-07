@@ -1,0 +1,17 @@
+<%= form_for(send_sm) do |f| %>
+  <% if send_sm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(send_sm.errors.count, "error") %> prohibited this send_sm from being saved:</h2>
+
+      <ul>
+      <% send_sm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

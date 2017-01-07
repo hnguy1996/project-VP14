@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products Store</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body id="store">
+    <div id="banner">
+        <%= @products || "Products Store" %>
+    </div>
+    <div id="columns">
+        <div id="side">
+          <%= link_to 'Home', products_path %><br />
+          <%= link_to 'New Product', new_product_path %><br />
+          <a href="#">Sign up / Log in</a><br />
+          <a href="#">Contact</a><br />
+        </div>
+        <div id="main">
+            <%= yield %>
+        </div>
+    </div>
+</body>
+</html>
