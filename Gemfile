@@ -9,6 +9,15 @@ gem 'bootstrap-will_paginate'
 gem 'kaminari' #giúp phân trang
 gem 'ransack' #tạo form tìm kiếm
 gem 'bootstrap-kaminari-views' #giao diện cho phân trang
+
+#Travis CI
+#group :test do
+#  gem 'rake'
+#end
+#chung thuc
+gem 'devise'
+
+#
 gem 'twilio-ruby'
 gem 'bcrypt-ruby'
 gem 'dotenv-rails', require: 'dotenv/rails-now'

@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
   def index
@@ -32,7 +31,6 @@ class ProductsController < ApplicationController
       if @product.save
         send_text_message
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
-
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
