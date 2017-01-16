@@ -5,6 +5,7 @@ class UsernamesController < ApplicationController
   # GET /usernames.json
   def index
     @usernames = Username.all
+    @secret = ENV['SUPER_SECRET']
   end
 
   # GET /usernames/1
