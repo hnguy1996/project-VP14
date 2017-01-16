@@ -10,7 +10,6 @@ gem 'kaminari' #giúp phân trang
 gem 'ransack' #tạo form tìm kiếm
 gem 'bootstrap-kaminari-views' #giao diện cho phân trang
 gem 'pg'
-gem 'dotenv-rails'
 #Travis CI
 #group :test do
 #  gem 'rake'
