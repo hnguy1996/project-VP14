@@ -1,11 +1,12 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
     @product = Product.new
-    @products = Product.all.paginate(:page => params[:page], :per_page => 10)
+    @products = Product.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /products/1
@@ -31,6 +32,7 @@ class ProductsController < ApplicationController
       if @product.save
         send_text_message
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
+
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

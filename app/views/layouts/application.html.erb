@@ -6,20 +6,25 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 </head>
+<head>
+   <title>Tutorialspoint</title>
+
+   <%= csrf_meta_tags %>
+</head>
 <body id="store">
     <div id="banner">
-        <%= @products || "Products Store" %>
+        <%= @a || "Store" %>
     </div>
     <div id="columns">
         <div id="side">
           <%= link_to 'Home', products_path %><br />
           <%= link_to 'New Product', new_product_path %><br />
-          <a href="#">Sign up / Log in</a><br />
+          <%= link_to 'Upload Image', new_resume_path %><br />
+          <%= link_to 'Log in', new_username_path %><br />
           <a href="#">Contact</a><br />
         </div>
         <div id="main">
             <%= yield %>
         </div>
-    </div>
 </body>
 </html>

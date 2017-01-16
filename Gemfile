@@ -9,14 +9,15 @@ gem 'bootstrap-will_paginate'
 gem 'kaminari' #giúp phân trang
 gem 'ransack' #tạo form tìm kiếm
 gem 'bootstrap-kaminari-views' #giao diện cho phân trang
-
+gem 'pg'
 #Travis CI
 #group :test do
 #  gem 'rake'
 #end
 #chung thuc
 gem 'devise'
-
+gem'carrierwave'
+gem 'bootstrap-sass','~> 2.3.2'
 #
 gem 'twilio-ruby'
 gem 'bcrypt-ruby'
